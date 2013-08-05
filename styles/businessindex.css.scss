@@ -1,5 +1,3 @@
-
-
 #main {	
 	width: 40%;
 	/*min-height:550px;*/
@@ -8,7 +6,6 @@
 	margin-left: 1%;
 	margin-right: 3%;
 	float: right;
-
 	}		
 aside { 
 	padding: 10px;
@@ -199,4 +196,128 @@ header nav {
 				padding: 10px;
 				text-align: center;
 				}			
+}
+
+/*BOOKMARK BUTTON*/
+/*button1b*/
+
+.button1b {
+  display:block;
+  width:20px;
+  height:20px;
+  background: rgba(255, 200, 0, 1);
+  border-radius:15px;
+  border:2px solid rgba(255, 200, 0, 1);
+  transition: all .5s;
+  overflow:hidden;
+
+	&:after {
+	display:block;
+	width:50px;
+	height:50px;
+	background: rgba(255, 200, 0, 1);
+	border-radius:25px;
+	};
+}
+
+
+.button1b-content {
+  font
+  family:Helvetica;
+  font-size:15px;
+  font-weight:bold;
+  line-height:50px;
+  color: rgba(255, 255, 255, 1);
+  width:150px;
+  position: relative;
+  transition: all 1s;
+  left:150px;
+  height:55px;
+}
+
+.button1b-content:before {
+  content: '★';
+  position: absolute;
+  right: 250px;
+  background-color: rgba(255, 255, 255, 1);
+  width:50px;
+  height:50px;
+  border-radius:25px;
+  color: rgba(255, 200, 0, 1);
+  :after;
+}
+
+.button1b:hover{
+  display:block;
+  width:50px;
+  height:50px;
+  background: rgba(255, 200, 0, 1);
+  border-radius:25px;
+  border:2px solid rgba(255, 200, 0, 1);
+}
+
+
+
+.button1b:active:after {
+  display:block;
+  width:50px;
+  height:50px;
+  background: rgba(255, 200, 0, 1);
+  border-radius:25px;
+}
+
+/*Containers*/
+
+.container {
+  width:50px;
+  height:50px;
+  margin:3px;
+  float:right;
+  vertical-align:middle;
+}
+
+/*Apply Button*/
+
+
+
+.read-more{
+  display:inline-block;
+  font-family:'Gill Sans', Gill Sans, sans-serif;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding:1em;
+  color:white;
+  position:relative;
+  padding-left:2.0em;
+  margin:.2em;
+  border:solid 0.20em white;
+  
+  span{
+    display:block;
+    position:absolute;
+    top:0.9em;
+    left:1em;
+    width:0.9em;
+    padding:0.1em;
+    height:0.9em;
+    text-align:center;
+  }
+  
+ 
+}
+
+.alt2{
+  transition:all 0.25s linear;
+  span{
+   transition:all 0.25s linear; 
+  }
+  &:hover{
+   text-indent:-1.5em;
+   padding-right:2.5em;
+    color:white;
+    background:#8AB6BA;
+     span{
+      left:90%;
+    }
+  }
 }

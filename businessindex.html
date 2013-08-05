@@ -4,7 +4,7 @@
 		<meta charset="utf-8"/>
 		<title> Entreprenology</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-		<link href="styles/main.css" type="text/css" rel="stylesheet">
+		<link href="styles/businessindex.css.scss" type="text/scss" rel="stylesheet">
 		<script src="businessindexcontroller.js"></script>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,7 +16,6 @@
 		<div id="wrapper" data-ng-controller="BusinessCtrl">
 		
 			<header>
-				
 				<nav id="skipTo">
 					<ul>
 						<li>
@@ -37,7 +36,7 @@
 
 			            <input type="text" data-ng-model="keyworddescription" placeholder="Keyword"/> 
 
-			            <select ng-model="intern" ng-options="status.paidvolunteer for status in statusList | orderBy:'applicationStatus'">
+			            <select ng-model="intern" ng-options="status.renumeration for status in statusList | orderBy:'applicationStatus'">
 			                <option value="">Paid/Volunteer</option>
 			            </select>
 			            <select ng-model="intern" ng-options="interviewstatus.firstinterview for interviewstatus in firstInterviewList | orderBy:'applicationStatus'">
@@ -50,9 +49,10 @@
 
 			<section id="company_info">
 			<div ng-show="hovering" >
+				<a class='read-more alt2' href="#"><span>></span>Apply</a>
 				<img src="http://www.corporatetraveller.ca/assets/images/profile-placeholder.gif" /><br>
 				<p></p>
-				<h3>Description:</h3> <br>
+				<h3>Description:</h3> 
 				<p></p>
 				{{hoveredCompany.keyworddescription}}<br>
 				<p></p>
@@ -81,8 +81,18 @@
 		
 			<section id="main">
 	            	<ul id="profile_container" data-ng-repeat="company in companies |filter:name| filter:paid | filter:intern| filter:industry| filter:location| filter:keyworddescription| filter: firstinterview">
-	                    <li ng-mouseover="showDetails(company)" id="proflist"><h1>{{company.name}}</h1><br>
-		                    {{company.paidvolunteer}}<br>
+	                    <li ng-mouseover="showDetails(company)" id="proflist">
+	                    <h2>
+							<center>
+							  <div class="container">
+							    <div class="button1b">
+							      <div class="button1b-content"></div>
+							    </div>
+							  </div>
+							</center>	
+		            	</h2>
+	                    <h1>{{company.name}}</h1><br>
+		                    {{company.renumeration}}<br>
 		                    <p></p>
 		                    Location: {{company.location}}<br>
 		                    <h2>{{company.industry}}</h2>
